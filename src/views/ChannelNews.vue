@@ -1,5 +1,8 @@
 <template>
     <div>
+        <div class="type-title">
+            {{channelName}}
+        </div>
         <loading v-if="isLoading"/>
         <newsList v-else :newsList="newsLists" />
         <Pager :pageNumber=pageNumber :nowNumber=nowNumber 
@@ -23,6 +26,7 @@ export default {
         return{
             nowNumber : 1,
             displayNumber: 10,
+            channelName: '',
         }
     },
     computed:{
@@ -30,7 +34,7 @@ export default {
             newsLists: "data",
             isLoading: "isLoading",
             pageNumber: "allPage",
-        })
+        }),
     },
     methods:{
         handleNumber(num){
@@ -48,7 +52,6 @@ export default {
     },
     },
     created(){
-        console.log(this.$route);
         this.$store.dispatch("news/getData",[
             this.$route.params.id,
             this.nowNumber,
@@ -72,11 +75,19 @@ export default {
                     this.displayNumber
                 ])
             }
+        },
+        newsLists(){
+                this.channelName = this.newsLists[0].channelName;
         }
     }
 }
 </script>
 
 <style>
-
+    .type-title {
+    font-size: 2em;
+    color: #888;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    }
 </style>
