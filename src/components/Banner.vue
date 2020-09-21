@@ -37,7 +37,7 @@ destroyed(){
 },
 data(){
     return{
-        index: 0,   //当前现实的时第几张图片
+        index: 0,   //当前显示的时第几张图片
         timer: null,
     }
 },

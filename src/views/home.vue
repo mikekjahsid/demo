@@ -55,10 +55,9 @@ methods:{
 data(){
   return{
     banners:[
-      {link:'https://www.baidu.com',url:require('@/assets/banners/1.jpg') },
-      {link:'https://www.baidu.com',url:require('@/assets/banners/2.jpg') },
-      {link:'https://www.baidu.com',url:require('@/assets/banners/3.jpg') },
-      {link:'https://www.baidu.com',url:require('@/assets/banners/4.jpg') },
+      {link:'https://www.baidu.com',url:require('@/assets/banners/轮.jpg') },
+      {link:'https://www.baidu.com',url:require('@/assets/banners/播.jpg') },
+      {link:'https://www.baidu.com',url:require('@/assets/banners/图.jpg') },
     ],
     nowNumber : 1,
     displayNumber: 10,
